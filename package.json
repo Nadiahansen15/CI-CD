@@ -1,0 +1,27 @@
+{
+  "name": "ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prod": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keaMike/CI-CD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keaMike/CI-CD/issues"
+  },
+  "homepage": "https://github.com/keaMike/CI-CD#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.2.0",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
