@@ -10,7 +10,7 @@ app.post('/users', (req, res) => {
   if (!username || !password) {
     res.status(400).json({ msg: 'Missing username or password' })
   }
-  res.status(200).json({ bug: '1337' })
+  res.status(200).json({ token: '1337' })
 })
 
 if (process.env.NODE_ENV !== 'test') {
