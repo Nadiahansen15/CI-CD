@@ -1,17 +1,17 @@
-name: CI/CD Presentation
+name: CI/CD Presentation # Name of workflow
 
-on:
-  pull_request:
-    branches: [master]
+on: # Event - Run everytime we make a pull request to master branch
+    pull_request:
+        branches: [master]
 
-jobs:
-  test_pull_request:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
-      - run: npm build
+jobs: # All the jobs github will run
+    test_pull_request: # Name of the job
+        runs-on: ubuntu-latest # Configure what type of VM to run the job on
+        steps: # Group together all the steps for the 'example_job'. Each step is a action/shell cmd
+            - uses: actions/checkout@v2 # Checks out our repo so we can run actions against our code
+            - uses: actions/setup-node@v1 # Setup node js, so we have access to npm
+              with:
+                  node-version: 12 # Version of node
+            - run: npm ci # Clean install packages
+            - run: npm test # Run our tests
+            - run: npm build # Build our project
