@@ -15,7 +15,8 @@ app.post('/users', (req, res) => {
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
-    console.log(`Server runnning on port ${PORT}`)
+    console.log(`Server runnning on port ${PORT} niiiiice maaaaaaaaan`)
+    console.log(`nicolaj hedder rigtigt theaaaaaaaa`)
   })
 }
 
